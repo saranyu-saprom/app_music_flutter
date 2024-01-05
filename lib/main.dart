@@ -14,8 +14,6 @@ import 'music_module/presentations/screens/music_list_screen.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  dotenv.load(fileName: '.env');
-
   final MusicImplUseCase musicUsecase = MusicImplUseCase(
     repository: MusicImplRepository(
       restfulApiDataSource: ApiDataSource(
@@ -31,7 +29,13 @@ void main() {
     ),
   );
 
-  runApp(const MyApp());
+  loadEnvironment().then((_) {
+    runApp(const MyApp());
+  });
+}
+
+Future<void> loadEnvironment() async {
+  await dotenv.load(fileName: '.env');
 }
 
 class MyApp extends StatelessWidget {
