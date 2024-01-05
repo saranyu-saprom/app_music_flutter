@@ -24,7 +24,6 @@ class MusicGetMusicListController extends GetxController {
 
   Future<void> getMusicList() async {
     try {
-      print('controller');
       _status = MusicStatusViewModel.loading;
 
       final MusicGetMusicListResponseBodyEntity response = await _usecase.getMusicList();

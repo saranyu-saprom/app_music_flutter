@@ -19,10 +19,6 @@ class ApiDataSource implements RestfulApiDataSource {
   @override
   Future<MusicGetMusicListResponseBodyDataSourceModel> getMusicList() async {
     try {
-      print('datasource ${dotenv.env[musicApiUrlEnv]}');
-
-      print('Url is ${'${dotenv.env[musicApiUrlEnv]}$musicGetInformationApi'}');
-
       final Response<String> response = await _http.get(
         '${dotenv.env[musicApiUrlEnv]}$musicGetInformationApi',
         options: Options(
@@ -44,7 +40,6 @@ class ApiDataSource implements RestfulApiDataSource {
             .toList(),
       );
     } catch (e) {
-      print('error $e');
       rethrow;
     }
   }

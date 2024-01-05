@@ -12,8 +12,6 @@ class MusicImplUseCase implements MusicUseCase {
   @override
   Future<MusicGetMusicListResponseBodyEntity> getMusicList() async {
     try {
-      print('usecase');
-
       return await _repository.getMusicList();
     } catch (e) {
       rethrow;

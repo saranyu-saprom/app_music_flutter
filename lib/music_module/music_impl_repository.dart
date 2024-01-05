@@ -16,8 +16,6 @@ class MusicImplRepository implements MusicRepository {
   @override
   Future<MusicGetMusicListResponseBodyEntity> getMusicList() async {
     try {
-      print('repo');
-
       final MusicGetMusicListResponseBodyDataSourceModel response =
           await _restfulApiDataSource.getMusicList();
 

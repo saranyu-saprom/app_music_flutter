@@ -14,7 +14,7 @@ import 'music_module/presentations/screens/music_list_screen.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  dotenv.load();
+  dotenv.load(fileName: '.env');
 
   final MusicImplUseCase musicUsecase = MusicImplUseCase(
     repository: MusicImplRepository(
