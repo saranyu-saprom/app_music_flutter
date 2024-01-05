@@ -137,17 +137,17 @@ class MusicFullScreenWidget extends StatelessWidget {
                 ),
               ],
             ),
-            Container(
-              padding: const EdgeInsets.all(16.0), // Adjust the padding for thickness
-              child: IconButton(
-                color: Colors.white,
-                icon: const Icon(Icons.shuffle),
-                iconSize: 40,
-                onPressed: () async {
-                  _onTapShuffle();
-                },
-              ),
-            ),
+            // Container(
+            //   padding: const EdgeInsets.all(16.0), // Adjust the padding for thickness
+            //   child: IconButton(
+            //     color: Colors.white,
+            //     icon: const Icon(Icons.shuffle),
+            //     iconSize: 40,
+            //     onPressed: () async {
+            //       _onTapShuffle();
+            //     },
+            //   ),
+            // ),
             Container(
               margin: const EdgeInsets.only(top: 15),
               child: IconButton(
